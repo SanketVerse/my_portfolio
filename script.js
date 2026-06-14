@@ -89,18 +89,18 @@
     const iconMenu    = document.getElementById('iconMenu');
     const iconClose   = document.getElementById('iconClose');
 
-    // Section → nav-id mapping (matches original sectionMap)
+    // Section → nav-id mapping (matches original sectionMap in DOM order)
     const sectionMap = {
-      'top':        'hero',
-      'about':      'about',
-      'work':       'projects',
-      'frames':     'projects',
-      'expertise':  'projects',
-      'research':   'research',
-      'experience': 'experience',
-      'education':  'experience',
-      'awards':     'experience',
-      'contact':    'contact',
+      'top':             'hero',
+      'projects-sticky': 'projects',
+      'about':           'about',
+      'frames':          'projects',
+      'education':       'experience',
+      'expertise':       'projects',
+      'experience':      'experience',
+      'awards':          'experience',
+      'research':        'research',
+      'contact':         'contact',
     };
 
     function setActive(navId) {

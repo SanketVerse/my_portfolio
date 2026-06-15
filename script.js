@@ -262,12 +262,29 @@
   (function initScrollReveal() {
     const els = document.querySelectorAll('.fade-up-el');
 
+    function animateSkillBars(profSection) {
+      const fills = profSection.querySelectorAll('.skill-fill');
+      fills.forEach((fill, i) => {
+        const target = fill.dataset.width;
+        setTimeout(() => {
+          fill.style.width = target + '%';
+        }, i * 70);
+      });
+    }
+
     const obs = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
-        if (!entry.isIntersecting) return;
-        const delay = parseInt(entry.target.dataset.delay) || 0;
-        setTimeout(() => entry.target.classList.add('visible'), delay);
-        obs.unobserve(entry.target);
+        // Trigger if intersecting OR if the element is above the viewport (scrolled past it)
+        if (entry.isIntersecting || entry.boundingClientRect.top < 0) {
+          const delay = parseInt(entry.target.dataset.delay) || 0;
+          setTimeout(() => {
+            entry.target.classList.add('visible');
+            if (entry.target.id === 'proficiencySection') {
+              animateSkillBars(entry.target);
+            }
+          }, delay);
+          obs.unobserve(entry.target);
+        }
       });
     }, { threshold: 0.08, rootMargin: '-40px 0px' });
 
@@ -371,30 +388,8 @@
 
   /* ═══════════════════════════════════════
      9. SKILL BAR ANIMATIONS
-        Triggers width when section is visible
+        (Handled inside Scroll Reveal above)
   ═══════════════════════════════════════ */
-  (function initSkillBars() {
-    const profSection = document.getElementById('proficiencySection');
-    if (!profSection) return;
-
-    const fills = profSection.querySelectorAll('.skill-fill');
-    let animated = false;
-
-    const obs = new IntersectionObserver((entries) => {
-      if (entries[0].isIntersecting && !animated) {
-        animated = true;
-        fills.forEach((fill, i) => {
-          const target = fill.dataset.width;
-          setTimeout(() => {
-            fill.style.width = target + '%';
-          }, i * 70);
-        });
-        obs.disconnect();
-      }
-    }, { threshold: 0.3 });
-
-    obs.observe(profSection);
-  })();
 
 
   /* ═══════════════════════════════════════

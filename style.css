@@ -226,7 +226,7 @@ section[id], span#work { scroll-margin-top: 100px; }
   left: 50%;
   transform: translateX(-50%);
   width: 90%;
-  max-width: 900px;
+  max-width: 1020px;
   z-index: 100;
   pointer-events: none;
 }
@@ -261,26 +261,45 @@ section[id], span#work { scroll-margin-top: 100px; }
 .nav-links-desktop {
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 2px;
   flex: 1;
   justify-content: center;
 }
 
 .nav-link {
   position: relative;
-  padding: 8px 10px;
+  padding: 8px 8px;
   color: rgba(255,255,255,0.48);
   font-family: 'Satoshi', sans-serif;
-  font-size: 10.5px;
+  font-size: 10px;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.13em;
+  letter-spacing: 0.11em;
   text-decoration: none;
   transition: color 0.2s ease;
   white-space: nowrap;
 }
 .nav-link:hover { color: #ffffff; }
 .nav-link.active { color: #ffffff; }
+
+@media (min-width: 1024px) and (max-width: 1200px) {
+  .nav-capsule {
+    height: 52px;
+    padding: 0 14px 0 8px;
+  }
+  .nav-logo-img {
+    width: 75px;
+    height: 24px;
+  }
+  .nav-link {
+    padding: 6px 6px;
+    font-size: 8.5px;
+    letter-spacing: 0.08em;
+  }
+  .nav-link.active .nav-active-bar {
+    width: 14px;
+  }
+}
 
 .nav-active-bar {
   position: absolute;
@@ -328,7 +347,9 @@ section[id], span#work { scroll-margin-top: 100px; }
 
 /* Mobile menu */
 .nav-mobile-menu {
-  overflow: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-height: 75vh;
   height: 0;
   opacity: 0;
   background: rgba(14,14,18,0.96);

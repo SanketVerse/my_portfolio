@@ -94,11 +94,11 @@
       'top':             'hero',
       'projects-sticky': 'projects',
       'about':           'about',
-      'frames':          'projects',
-      'education':       'experience',
-      'expertise':       'projects',
+      'frames':          'frames',
+      'education':       'education',
+      'expertise':       'expertise',
       'experience':      'experience',
-      'awards':          'experience',
+      'awards':          'awards',
       'research':        'research',
       'contact':         'contact',
     };
@@ -158,7 +158,18 @@
     });
 
     function getAnchorForNav(navId) {
-      const map = { hero: 'top', about: 'about', projects: 'work', research: 'research', experience: 'experience', contact: 'contact' };
+      const map = {
+        hero: 'top',
+        about: 'about',
+        projects: 'work',
+        frames: 'frames',
+        education: 'education',
+        expertise: 'expertise',
+        experience: 'experience',
+        awards: 'awards',
+        research: 'research',
+        contact: 'contact'
+      };
       return map[navId] || navId;
     }
 

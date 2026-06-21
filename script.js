@@ -308,42 +308,7 @@
         Waits for GSAP + ScrollTrigger to load
   ═══════════════════════════════════════ */
   (function initGSAP() {
-    let attempts = 0;
-
-    function tryInit() {
-      attempts++;
-      if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') {
-        if (attempts < 30) setTimeout(tryInit, 200);
-        return;
-      }
-
-      // Skip GSAP effects on mobile
-      if (window.innerWidth <= 768) return;
-
-      gsap.registerPlugin(ScrollTrigger);
-
-      const cards   = gsap.utils.toArray('.proj-card');
-      const section = document.getElementById('projects-editorial');
-
-      // Scale each card down as the next one scrolls on top
-      cards.forEach((card, i) => {
-        if (i < cards.length - 1) {
-          gsap.to(card, {
-            scale: 0.92,
-            ease: 'none',
-            scrollTrigger: {
-              trigger: card,
-              start: 'top top',
-              end: '+=100%',
-              scrub: true,
-              invalidateOnRefresh: true,
-            },
-          });
-        }
-      });
-    }
-
-    tryInit();
+    // GSAP scroll scaling was removed in favor of natural scrolling for the redesigned project cards.
   })();
 
 

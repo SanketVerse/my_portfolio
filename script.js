@@ -91,16 +91,16 @@
 
     // Section → nav-id mapping (matches original sectionMap in DOM order)
     const sectionMap = {
-      'top':             'hero',
-      'projects-sticky': 'projects',
-      'about':           'about',
-      'frames':          'frames',
-      'education':       'education',
-      'expertise':       'expertise',
-      'experience':      'experience',
-      'awards':          'awards',
-      'research':        'research',
-      'contact':         'contact',
+      'top':               'hero',
+      'projects-editorial': 'projects',
+      'about':             'about',
+      'frames':            'frames',
+      'education':         'education',
+      'expertise':         'expertise',
+      'experience':        'experience',
+      'awards':            'awards',
+      'research':          'research',
+      'contact':           'contact',
     };
 
     function setActive(navId) {
@@ -304,9 +304,8 @@
 
 
   /* ═══════════════════════════════════════
-     7. GSAP — Project sticky cards scale
-        + progress bar
-        Waits for GSAP to load from CDN
+     7. GSAP — Project card sticky scale
+        Waits for GSAP + ScrollTrigger to load
   ═══════════════════════════════════════ */
   (function initGSAP() {
     let attempts = 0;
@@ -323,15 +322,14 @@
 
       gsap.registerPlugin(ScrollTrigger);
 
-      const cards    = gsap.utils.toArray('.project-card');
-      const progress = document.getElementById('projectsProgress');
-      const section  = document.getElementById('projects-sticky');
+      const cards   = gsap.utils.toArray('.proj-card');
+      const section = document.getElementById('projects-editorial');
 
       // Scale each card down as the next one scrolls on top
       cards.forEach((card, i) => {
         if (i < cards.length - 1) {
           gsap.to(card, {
-            scale: 0.90,
+            scale: 0.92,
             ease: 'none',
             scrollTrigger: {
               trigger: card,
@@ -343,22 +341,11 @@
           });
         }
       });
-
-      // Progress bar
-      if (progress && section) {
-        ScrollTrigger.create({
-          trigger: section,
-          start: 'top top',
-          end: 'bottom bottom',
-          onUpdate: (self) => {
-            progress.style.width = (self.progress * 100) + '%';
-          },
-        });
-      }
     }
 
     tryInit();
   })();
+
 
 
   /* ═══════════════════════════════════════

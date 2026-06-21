@@ -173,133 +173,311 @@
       </div>
     </section>
 
-    <!-- ──────────── PROJECTS (Sticky Stack) ──────────── -->
+    <!-- ──────────── PROJECTS (Editorial) ──────────── -->
     <span id="work" style="display:block;visibility:hidden;height:0" aria-hidden="true"></span>
-    <section id="projects-sticky">
-      <div class="cards-wrapper">
+    <section id="projects-editorial" class="section-pad proj-section">
 
-        <!-- Card 1: AION -->
-        <div class="project-card" id="card-1" style="z-index:1">
-          <div class="card-bg-image">
-            <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80" alt="" class="card-bg-img" aria-hidden="true" />
-          </div>
-          <div class="card-overlay"></div>
-          <div class="card-number" aria-hidden="true">01</div>
-          <div class="card-inner">
-            <div class="card-left">
-              <span class="card-index">01 / 05 &nbsp;·&nbsp; Selected Work</span>
-              <div class="card-tags"><span class="card-tag">AI AGENTS</span><span class="card-tag">MARKETPLACE</span><span class="card-tag">AAAS</span></div>
-              <h3 class="card-title">AION</h3>
-              <p class="card-desc">Agent-as-a-Service marketplace where freelancers publish ready-to-use agent workflows. AI agents handle onboarding, API integration, configuration, and deployment — zero coding required.</p>
-              <div class="card-metric">Zero-code agent deployment · Multi-agent orchestration</div>
-              <div class="card-links">
-                <a href="https://github.com/SanketVerse/AION" target="_blank" rel="noopener noreferrer" class="link-primary">View Project →</a>
-                <a href="https://github.com/SanketVerse" target="_blank" rel="noopener noreferrer" class="link-secondary">GitHub ↗</a>
-              </div>
-            </div>
-            <div class="card-right"></div>
-          </div>
-          <div class="card-footer"><div class="card-footer-line"></div><span class="card-footer-text">Scroll for next</span></div>
-        </div>
-
-        <!-- Card 2: Scrappydo -->
-        <div class="project-card" id="card-2" style="z-index:2">
-          <div class="card-bg-image">
-            <img src="https://images.unsplash.com/photo-1545987796-200677ee1011?auto=format&fit=crop&q=80" alt="" class="card-bg-img" aria-hidden="true" />
-          </div>
-          <div class="card-overlay"></div>
-          <div class="card-number" aria-hidden="true">02</div>
-          <div class="card-inner">
-            <div class="card-left">
-              <span class="card-index">02 / 05 &nbsp;·&nbsp; Selected Work</span>
-              <div class="card-tags"><span class="card-tag">DATA ENGINEERING</span><span class="card-tag">WEB SCRAPING</span><span class="card-tag">PYTHON</span></div>
-              <h3 class="card-title">Scrappydo</h3>
-              <p class="card-desc">Full-stack data engineering platform with a complete Extract → Clean → Visualize pipeline. Autonomously scrapes, structures, and presents web content for market research and AI datasets.</p>
-              <div class="card-metric">End-to-end pipeline: Extract → Clean → Display · JSON &amp; CSV export</div>
-              <div class="card-links">
-                <a href="https://github.com/SanketVerse/Scrappydo" target="_blank" rel="noopener noreferrer" class="link-primary">View Project →</a>
-                <a href="https://github.com/SanketVerse/Scrappydo" target="_blank" rel="noopener noreferrer" class="link-secondary">GitHub ↗</a>
-              </div>
-            </div>
-            <div class="card-right"></div>
-          </div>
-          <div class="card-footer"><div class="card-footer-line"></div><span class="card-footer-text">Scroll for next</span></div>
-        </div>
-
-        <!-- Card 3: PadhAI -->
-        <div class="project-card" id="card-3" style="z-index:3">
-          <div class="card-bg-image">
-            <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&q=80" alt="" class="card-bg-img" aria-hidden="true" />
-          </div>
-          <div class="card-overlay"></div>
-          <div class="card-number" aria-hidden="true">03</div>
-          <div class="card-inner">
-            <div class="card-left">
-              <span class="card-index">03 / 05 &nbsp;·&nbsp; Selected Work</span>
-              <div class="card-tags"><span class="card-tag">LANGCHAIN</span><span class="card-tag">RAG</span><span class="card-tag">STREAMLIT</span></div>
-              <h3 class="card-title">PadhAI</h3>
-              <p class="card-desc">LangChain agent that ingests YouTube videos, Docs, and LMS content to auto-generate quizzes, flashcards, and TTS audio summaries. Integrated with Quizlet API. Deployed on Streamlit Cloud via GitHub CI.</p>
-              <div class="card-metric">60-min video → structured quiz in &lt;30s · Streamlit Cloud deployed</div>
-              <div class="card-links">
-                <a href="https://padh-ai-pro.vercel.app" target="_blank" rel="noopener noreferrer" class="link-primary">View Project →</a>
-                <a href="https://github.com/SanketVerse/Padh-Ai" target="_blank" rel="noopener noreferrer" class="link-secondary">GitHub ↗</a>
-              </div>
-            </div>
-            <div class="card-right"></div>
-          </div>
-          <div class="card-footer"><div class="card-footer-line"></div><span class="card-footer-text">Scroll for next</span></div>
-        </div>
-
-        <!-- Card 4: MAX -->
-        <div class="project-card" id="card-4" style="z-index:4">
-          <div class="card-bg-image">
-            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80" alt="" class="card-bg-img" aria-hidden="true" />
-          </div>
-          <div class="card-overlay"></div>
-          <div class="card-number" aria-hidden="true">04</div>
-          <div class="card-inner">
-            <div class="card-left">
-              <span class="card-index">04 / 05 &nbsp;·&nbsp; Selected Work</span>
-              <div class="card-tags"><span class="card-tag">EDGE AI</span><span class="card-tag">RASPBERRY PI</span><span class="card-tag">GEMMA 1B</span></div>
-              <h3 class="card-title">MAX</h3>
-              <p class="card-desc">Privacy-first, zero-cloud AI voice assistant on Raspberry Pi using Gemma 1B. Complete on-device LLM inference with custom audio pipeline (mic → inference → TTS). Sub-2s end-to-end latency.</p>
-              <div class="card-metric">&lt;2s latency · 100% on-device · 4-core ARM · Zero cloud</div>
-              <div class="card-links">
-                <a href="https://github.com/SanketVerse" target="_blank" rel="noopener noreferrer" class="link-primary">View Project →</a>
-                <a href="https://github.com/SanketVerse" target="_blank" rel="noopener noreferrer" class="link-secondary">GitHub ↗</a>
-              </div>
-            </div>
-            <div class="card-right"></div>
-          </div>
-          <div class="card-footer"><div class="card-footer-line"></div><span class="card-footer-text">Scroll for next</span></div>
-        </div>
-
-        <!-- Card 5: SYNAPSE -->
-        <div class="project-card" id="card-5" style="z-index:5">
-          <div class="card-bg-image">
-            <img src="https://images.unsplash.com/photo-1507413245164-6160d8298b31?auto=format&fit=crop&q=80" alt="" class="card-bg-img" aria-hidden="true" />
-          </div>
-          <div class="card-overlay"></div>
-          <div class="card-number" aria-hidden="true">05</div>
-          <div class="card-inner">
-            <div class="card-left">
-              <span class="card-index">05 / 05 &nbsp;·&nbsp; Selected Work</span>
-              <div class="card-tags"><span class="card-tag">PSYCHOMETRICS</span><span class="card-tag">SEVERITY ROUTING</span><span class="card-tag">HACKATHON WINNER</span></div>
-              <h3 class="card-title">SYNAPSE</h3>
-              <p class="card-desc">WHO-aligned psychometric assessment engine scoring stress, depression, and anxiety with severity-based routing to AI or live therapists. Won national-level hackathon.</p>
-              <div class="card-metric">Hackathon Winner · WHO-aligned scoring · Real-time severity routing</div>
-              <div class="card-links">
-                <a href="https://synapse-nu.vercel.app" target="_blank" rel="noopener noreferrer" class="link-primary">View Project →</a>
-                <a href="https://github.com/SanketVerse/Synapse" target="_blank" rel="noopener noreferrer" class="link-secondary">GitHub ↗</a>
-              </div>
-            </div>
-            <div class="card-right"></div>
-          </div>
-          <div class="card-footer"><div class="card-footer-line"></div><span class="card-footer-text">End of projects</span></div>
-        </div>
-
+      <div class="fade-up-el proj-section-hdr">
+        <span class="section-label">01 / Selected Work</span>
+        <h2 class="section-heading">Projects.</h2>
       </div>
+
+      <div class="proj-list">
+
+        <!-- ── Card 1: AION (odd → visual right) ── -->
+        <div class="proj-card fade-up-el" id="proj-aion">
+          <div class="proj-col proj-col--content">
+            <div class="proj-top">
+              <span class="proj-index">01 / 05 · Selected Work</span>
+              <div class="proj-tags">
+                <span class="proj-tag">AI AGENTS</span>
+                <span class="proj-tag">MARKETPLACE</span>
+                <span class="proj-tag">AAAS</span>
+              </div>
+              <h3 class="proj-title">AION</h3>
+              <p class="proj-desc">Agent-as-a-Service marketplace where freelancers publish ready-to-use workflows. AI agents handle onboarding, API integration, and deployment.</p>
+              <div class="proj-callout">
+                Zero-code agent deployment with full multi-agent orchestration — no technical setup required by end users.
+              </div>
+            </div>
+            <div class="proj-bottom">
+              <div class="proj-metrics">
+                <div class="proj-metric-item">
+                  <span class="metric-val">0</span>
+                  <span class="metric-label">Code Required</span>
+                </div>
+                <div class="proj-metric-div"></div>
+                <div class="proj-metric-item">
+                  <span class="metric-val">Multi</span>
+                  <span class="metric-label">Agent System</span>
+                </div>
+                <div class="proj-metric-div"></div>
+                <div class="proj-metric-item">
+                  <span class="metric-val">AaaS</span>
+                  <span class="metric-label">Architecture</span>
+                </div>
+              </div>
+              <div class="proj-actions">
+                <a href="https://github.com/SanketVerse/AION" target="_blank" rel="noopener noreferrer" class="proj-btn-primary">View Project →</a>
+                <a href="https://github.com/SanketVerse" target="_blank" rel="noopener noreferrer" class="proj-btn-ghost">GitHub ↗</a>
+              </div>
+            </div>
+          </div>
+          <div class="proj-col proj-col--visual">
+            <div class="proj-browser">
+              <div class="proj-browser-bar">
+                <span class="frame-dot frame-dot--red"></span>
+                <span class="frame-dot frame-dot--yellow"></span>
+                <span class="frame-dot frame-dot--green"></span>
+                <span class="frame-url-bar">aion.app · Agent-as-a-Service</span>
+              </div>
+              <div class="proj-browser-body">
+                <img src="images/aion-proj-pic.png" alt="AION Interface" class="proj-screenshot proj-screenshot--odd" />
+              </div>
+            </div>
+            <div class="proj-status">
+              <span class="proj-status-dot proj-status-dot--blue"></span>Open Source
+            </div>
+          </div>
+        </div>
+
+        <!-- ── Card 2: Scrappydo (even → visual left) ── -->
+        <div class="proj-card proj-card--flip fade-up-el" id="proj-scrappydo">
+          <div class="proj-col proj-col--visual">
+            <div class="proj-browser">
+              <div class="proj-browser-bar">
+                <span class="frame-dot frame-dot--red"></span>
+                <span class="frame-dot frame-dot--yellow"></span>
+                <span class="frame-dot frame-dot--green"></span>
+                <span class="frame-url-bar">scrappydo.app · AI Web Scraper</span>
+              </div>
+              <div class="proj-browser-body">
+                <img src="images/scrappy-proj-pic.png" alt="Scrappydo Interface" class="proj-screenshot proj-screenshot--even" />
+              </div>
+            </div>
+            <div class="proj-status">
+              <span class="proj-status-dot proj-status-dot--blue"></span>Open Source
+            </div>
+          </div>
+          <div class="proj-col proj-col--content">
+            <div class="proj-top">
+              <span class="proj-index">02 / 05 · Selected Work</span>
+              <div class="proj-tags">
+                <span class="proj-tag">DATA ENGINEERING</span>
+                <span class="proj-tag">WEB SCRAPING</span>
+                <span class="proj-tag">PYTHON</span>
+              </div>
+              <h3 class="proj-title">Scrappydo</h3>
+              <p class="proj-desc">Full-stack data engineering platform with a complete Extract → Clean → Visualize pipeline for market research and AI datasets.</p>
+              <div class="proj-callout">
+                End-to-end autonomous pipeline — scrape, clean, and present web data with JSON &amp; CSV export in a single workflow.
+              </div>
+            </div>
+            <div class="proj-bottom">
+              <div class="proj-metrics">
+                <div class="proj-metric-item">
+                  <span class="metric-val">E→C→D</span>
+                  <span class="metric-label">Pipeline</span>
+                </div>
+                <div class="proj-metric-div"></div>
+                <div class="proj-metric-item">
+                  <span class="metric-val">JSON</span>
+                  <span class="metric-label">CSV Export</span>
+                </div>
+                <div class="proj-metric-div"></div>
+                <div class="proj-metric-item">
+                  <span class="metric-val">AI</span>
+                  <span class="metric-label">Datasets</span>
+                </div>
+              </div>
+              <div class="proj-actions">
+                <a href="https://github.com/SanketVerse/Scrappydo" target="_blank" rel="noopener noreferrer" class="proj-btn-primary">View Project →</a>
+                <a href="https://github.com/SanketVerse/Scrappydo" target="_blank" rel="noopener noreferrer" class="proj-btn-ghost">GitHub ↗</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── Card 3: PadhAI (odd → visual right) ── -->
+        <div class="proj-card fade-up-el" id="proj-padhai">
+          <div class="proj-col proj-col--content">
+            <div class="proj-top">
+              <span class="proj-index">03 / 05 · Selected Work</span>
+              <div class="proj-tags">
+                <span class="proj-tag">LANGCHAIN</span>
+                <span class="proj-tag">RAG</span>
+                <span class="proj-tag">STREAMLIT</span>
+              </div>
+              <h3 class="proj-title">PadhAI</h3>
+              <p class="proj-desc">LangChain agent that ingests YouTube videos, Docs, and LMS content to auto-generate quizzes, flashcards, and TTS audio summaries.</p>
+              <div class="proj-callout">
+                60-minute video transformed into structured quiz in under 30 seconds — deployed live on Vercel via GitHub CI.
+              </div>
+            </div>
+            <div class="proj-bottom">
+              <div class="proj-metrics">
+                <div class="proj-metric-item">
+                  <span class="metric-val">&lt;30s</span>
+                  <span class="metric-label">Quiz Gen</span>
+                </div>
+                <div class="proj-metric-div"></div>
+                <div class="proj-metric-item">
+                  <span class="metric-val">Live</span>
+                  <span class="metric-label">on Vercel</span>
+                </div>
+                <div class="proj-metric-div"></div>
+                <div class="proj-metric-item">
+                  <span class="metric-val">RAG</span>
+                  <span class="metric-label">Architecture</span>
+                </div>
+              </div>
+              <div class="proj-actions">
+                <a href="https://padh-ai-pro.vercel.app" target="_blank" rel="noopener noreferrer" class="proj-btn-primary">View Project →</a>
+                <a href="https://github.com/SanketVerse/Padh-Ai" target="_blank" rel="noopener noreferrer" class="proj-btn-ghost">GitHub ↗</a>
+              </div>
+            </div>
+          </div>
+          <div class="proj-col proj-col--visual">
+            <div class="proj-browser">
+              <div class="proj-browser-bar">
+                <span class="frame-dot frame-dot--red"></span>
+                <span class="frame-dot frame-dot--yellow"></span>
+                <span class="frame-dot frame-dot--green"></span>
+                <span class="frame-url-bar">padhai.app · AI Learning Assistant</span>
+              </div>
+              <div class="proj-browser-body">
+                <img src="images/padhai-proj-pic.png" alt="PadhAI Interface" class="proj-screenshot proj-screenshot--odd" />
+              </div>
+            </div>
+            <div class="proj-status">
+              <span class="proj-status-dot proj-status-dot--green"></span>Live on Vercel
+            </div>
+          </div>
+        </div>
+
+        <!-- ── Card 4: MAX (even → visual left) ── -->
+        <div class="proj-card proj-card--flip fade-up-el" id="proj-max">
+          <div class="proj-col proj-col--visual">
+            <div class="proj-browser">
+              <div class="proj-browser-bar">
+                <span class="frame-dot frame-dot--red"></span>
+                <span class="frame-dot frame-dot--yellow"></span>
+                <span class="frame-dot frame-dot--green"></span>
+                <span class="frame-url-bar">max.local · Edge AI Assistant</span>
+              </div>
+              <div class="proj-browser-body proj-terminal">
+                <div class="terminal-line"><span class="t-prompt">$</span> ./max --listen</div>
+                <div class="terminal-line t-muted">Initializing Gemma 1B on ARM Cortex-A72...</div>
+                <div class="terminal-line t-ok">▸ STT engine ready</div>
+                <div class="terminal-line t-ok">▸ LLM on-device inference loaded</div>
+                <div class="terminal-line t-ok">▸ TTS pipeline active</div>
+                <div class="terminal-line"><span class="t-prompt">MAX&gt;</span> End-to-end latency: <span class="t-hi">1.8s</span></div>
+                <div class="terminal-line t-muted">— Zero cloud. Zero privacy risk.</div>
+              </div>
+            </div>
+            <div class="proj-status">
+              <span class="proj-status-dot proj-status-dot--green"></span>Edge Deployed
+            </div>
+          </div>
+          <div class="proj-col proj-col--content">
+            <div class="proj-top">
+              <span class="proj-index">04 / 05 · Selected Work</span>
+              <div class="proj-tags">
+                <span class="proj-tag">EDGE AI</span>
+                <span class="proj-tag">RASPBERRY PI</span>
+                <span class="proj-tag">GEMMA 1B</span>
+              </div>
+              <h3 class="proj-title">MAX</h3>
+              <p class="proj-desc">Privacy-first, zero-cloud AI voice assistant on Raspberry Pi using Gemma 1B. Full on-device LLM inference with custom audio pipeline.</p>
+              <div class="proj-callout">
+                Sub-2s end-to-end latency for complete mic → inference → TTS pipeline with absolute zero cloud dependency.
+              </div>
+            </div>
+            <div class="proj-bottom">
+              <div class="proj-metrics">
+                <div class="proj-metric-item">
+                  <span class="metric-val">&lt;2s</span>
+                  <span class="metric-label">Latency</span>
+                </div>
+                <div class="proj-metric-div"></div>
+                <div class="proj-metric-item">
+                  <span class="metric-val">100%</span>
+                  <span class="metric-label">On-Device</span>
+                </div>
+                <div class="proj-metric-div"></div>
+                <div class="proj-metric-item">
+                  <span class="metric-val">Zero</span>
+                  <span class="metric-label">Cloud</span>
+                </div>
+              </div>
+              <div class="proj-actions">
+                <a href="https://github.com/SanketVerse" target="_blank" rel="noopener noreferrer" class="proj-btn-primary">View Project →</a>
+                <a href="https://github.com/SanketVerse" target="_blank" rel="noopener noreferrer" class="proj-btn-ghost">GitHub ↗</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── Card 5: SYNAPSE (odd → visual right) ── -->
+        <div class="proj-card fade-up-el" id="proj-synapse">
+          <div class="proj-col proj-col--content">
+            <div class="proj-top">
+              <span class="proj-index">05 / 05 · Selected Work</span>
+              <div class="proj-tags">
+                <span class="proj-tag">PSYCHOMETRICS</span>
+                <span class="proj-tag">SEVERITY ROUTING</span>
+                <span class="proj-tag">🏆 WINNER</span>
+              </div>
+              <h3 class="proj-title">SYNAPSE</h3>
+              <p class="proj-desc">WHO-aligned psychometric assessment engine scoring stress, depression, and anxiety with real-time severity routing to AI or live therapists.</p>
+              <div class="proj-callout">
+                Won national-level hackathon — real-time WHO-aligned scoring with dynamic routing to therapist or AI responder.
+              </div>
+            </div>
+            <div class="proj-bottom">
+              <div class="proj-metrics">
+                <div class="proj-metric-item">
+                  <span class="metric-val">WHO</span>
+                  <span class="metric-label">Aligned</span>
+                </div>
+                <div class="proj-metric-div"></div>
+                <div class="proj-metric-item">
+                  <span class="metric-val">RT</span>
+                  <span class="metric-label">Routing</span>
+                </div>
+                <div class="proj-metric-div"></div>
+                <div class="proj-metric-item">
+                  <span class="metric-val">🏆</span>
+                  <span class="metric-label">National Win</span>
+                </div>
+              </div>
+              <div class="proj-actions">
+                <a href="https://synapse-nu.vercel.app" target="_blank" rel="noopener noreferrer" class="proj-btn-primary">View Project →</a>
+                <a href="https://github.com/SanketVerse/Synapse" target="_blank" rel="noopener noreferrer" class="proj-btn-ghost">GitHub ↗</a>
+              </div>
+            </div>
+          </div>
+          <div class="proj-col proj-col--visual">
+            <div class="proj-browser">
+              <div class="proj-browser-bar">
+                <span class="frame-dot frame-dot--red"></span>
+                <span class="frame-dot frame-dot--yellow"></span>
+                <span class="frame-dot frame-dot--green"></span>
+                <span class="frame-url-bar">synapse.app · Mental Health Platform</span>
+              </div>
+              <div class="proj-browser-body">
+                <img src="images/synapse-proj-pic.png" alt="SYNAPSE Interface" class="proj-screenshot proj-screenshot--odd" />
+              </div>
+            </div>
+            <div class="proj-status">
+              <span class="proj-status-dot proj-status-dot--green"></span>Live on Vercel
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /proj-list -->
     </section>
+
 
     <!-- ──────────────── ABOUT ──────────────── -->
     <section id="about" class="section-pad">

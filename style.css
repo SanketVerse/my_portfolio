@@ -682,7 +682,7 @@ section[id], span#work { scroll-margin-top: 100px; }
 .proj-list {
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 0;
 }
 
 /* ─── fbl-card layout ─── */
@@ -693,7 +693,7 @@ section[id], span#work { scroll-margin-top: 100px; }
   min-height: 340px;
   background: #f8fafc;
   border: 0.5px solid #e2e8f0;
-  border-radius: 16px;
+  border-radius: 0;
   overflow: hidden;
 }
 
@@ -761,6 +761,7 @@ section[id], span#work { scroll-margin-top: 100px; }
   flex-direction: column;
   justify-content: space-between;
   padding: 32px 40px;
+  min-height: 340px;
   background: transparent;
   z-index: 10;
 }
@@ -1049,12 +1050,79 @@ section[id], span#work { scroll-margin-top: 100px; }
 .t-ok      { color: #22C55E; }
 .t-hi      { color: #a78bfa; font-weight: 700; }
 
-/* Responsive Styling for FBL cards */
+/* ── Desktop — Sticky scroll stack for FBL cards ── */
+@media (min-width: 769px) {
+  /* Strip section-pad so cards run edge-to-edge */
+  .proj-section { padding: 0 !important; }
+  /* Header gets its own breathing room */
+  .proj-section-hdr { padding: 80px 64px 52px; }
+
+  /* Scroll container = 5 viewport-heights */
+  .proj-list {
+    position: relative;
+    height: calc(5 * 100vh);
+    gap: 0;
+  }
+
+  /* Each card pins to top and fills a full viewport */
+  .fbl-card {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    min-height: unset;
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    transform-origin: top center;
+    will-change: transform;
+  }
+
+  /* Stacking order — later cards sit on top */
+  .fbl-card:nth-child(1) { z-index: 1; }
+  .fbl-card:nth-child(2) { z-index: 2; }
+  .fbl-card:nth-child(3) { z-index: 3; }
+  .fbl-card:nth-child(4) { z-index: 4; }
+  .fbl-card:nth-child(5) { z-index: 5; }
+
+  /* Image zone must be absolute and fill the card */
+  .fbl-img-zone {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+  }
+
+  /* Content zone is absolute and fills card height */
+  .fbl-content {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    min-height: unset;
+    padding: 0 72px;
+    justify-content: center;
+  }
+
+  .fbl-card--flip .fbl-content {
+    left: 58%;
+    right: 0;
+    width: 42%;
+    padding: 0 72px;
+    justify-content: center;
+  }
+
+  .fbl-top { gap: 16px; }
+  .fbl-bottom { margin-top: 32px; }
+}
+
+/* Responsive Styling for FBL cards — Mobile */
 @media (max-width: 768px) {
   .fbl-card {
     min-height: auto;
     display: flex;
     flex-direction: column;
+    border-radius: 16px;
+    margin-bottom: 24px;
   }
   
   .fbl-img-zone,
@@ -1086,6 +1154,7 @@ section[id], span#work { scroll-margin-top: 100px; }
     right: 0;
     width: 100%;
     padding: 24px 20px;
+    min-height: auto;
   }
 
   .fbl-chrome {

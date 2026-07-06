@@ -1,2 +1,19 @@
 node_modules/
 .DS_Store
+
+# Raw / source image dumps in root (all deployed images live in /images/)
+*.png
+*.jpg
+*.jpeg
+
+# Allow images inside the /images/ folder
+!images/
+
+# Dev source files (minified versions are used in production)
+# style.css and script.js are kept for editing but we still commit them
+# so they can be rebuilt. This is fine.
+
+# Temp / OS files
+*.log
+.env
+Thumbs.db

@@ -324,6 +324,14 @@
 
       const cards = gsap.utils.toArray('.fbl-card');
 
+      // Assign ascending z-index so each card always stacks ON TOP of
+      // the previous card that is being scaled down. Without this,
+      // card N+1 renders behind card N during the overlap.
+      cards.forEach((card, i) => {
+        card.style.zIndex = i + 1;
+        card.style.transformOrigin = 'top center';
+      });
+
       // Scale each card down as the next one scrolls on top
       cards.forEach((card, i) => {
         if (i < cards.length - 1) {

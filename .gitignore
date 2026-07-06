@@ -1,19 +1,19 @@
+# Node / build tooling — not needed for vanilla deployment
 node_modules/
-.DS_Store
+package.json
+package-lock.json
+style.min.css
+script.min.js
 
-# Raw / source image dumps in root (all deployed images live in /images/)
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Stray root-level image dumps (all images live in /images/)
 *.png
 *.jpg
 *.jpeg
 
-# Allow images inside the /images/ folder
-!images/
-
-# Dev source files (minified versions are used in production)
-# style.css and script.js are kept for editing but we still commit them
-# so they can be rebuilt. This is fine.
-
-# Temp / OS files
+# Env / logs
 *.log
 .env
-Thumbs.db

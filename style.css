@@ -43,9 +43,14 @@ body {
 h1 { font-family: 'Clash Display', sans-serif; letter-spacing: -0.02em; font-weight: 700; color: var(--text-primary); }
 h2, h3, h4, h5, h6 { font-family: 'Satoshi', sans-serif; letter-spacing: -0.01em; font-weight: 700; color: var(--text-primary); }
 p, li { font-family: 'Inter', sans-serif; color: var(--text-secondary); }
-a { color: var(--accent-primary); text-decoration: none; cursor: none; }
+a { color: var(--accent-primary); text-decoration: none; }
 img { display: block; max-width: 100%; }
-button { cursor: none; }
+button { }
+
+/* Custom cursor — only applied on fine-pointer (mouse) devices */
+@media (pointer: fine) {
+  a, button { cursor: none; }
+}
 
 ::selection { background: rgba(45,107,228,0.15); color: var(--accent-primary); }
 ::-webkit-scrollbar { width: 4px; }
@@ -1101,10 +1106,10 @@ section[id], span#work { scroll-margin-top: 100px; }
   /* Header gets its own breathing room */
   .proj-section-hdr { padding: 80px 64px 52px; }
 
-  /* Scroll container = 5 viewport-heights */
+  /* Scroll container = 6 viewport-heights (one per card) */
   .proj-list {
     position: relative;
-    height: calc(5 * 100vh);
+    height: calc(6 * 100vh);
     gap: 0;
   }
 
@@ -1128,6 +1133,7 @@ section[id], span#work { scroll-margin-top: 100px; }
   .fbl-card:nth-child(3) { z-index: 3; }
   .fbl-card:nth-child(4) { z-index: 4; }
   .fbl-card:nth-child(5) { z-index: 5; }
+  .fbl-card:nth-child(6) { z-index: 6; }
 
   /* Image zone must be absolute and fill the card */
   .fbl-img-zone {

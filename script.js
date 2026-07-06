@@ -11,28 +11,28 @@
      1. LOADER
   ═══════════════════════════════════════ */
   (function initLoader() {
-    const loader     = document.getElementById('loader');
-    const percentEl  = document.getElementById('loaderPercent');
-    const barEl      = document.getElementById('loaderBar');
-    const TOTAL_MS   = 1800;
-    const START      = performance.now();
+    const loader = document.getElementById('loader');
+    const percentEl = document.getElementById('loaderPercent');
+    const barEl = document.getElementById('loaderBar');
+    const TOTAL_MS = 1800;
+    const START = performance.now();
     let raf;
 
     function tick(now) {
       const elapsed = now - START;
-      const raw     = Math.min(elapsed / TOTAL_MS, 1);
+      const raw = Math.min(elapsed / TOTAL_MS, 1);
       // Quadratic ease-out: fast start, slows near 100 %
-      const eased   = 1 - Math.pow(1 - raw, 2);
-      const pct     = Math.floor(eased * 100);
+      const eased = 1 - Math.pow(1 - raw, 2);
+      const pct = Math.floor(eased * 100);
 
       percentEl.textContent = pct + '%';
-      barEl.style.width     = pct + '%';
+      barEl.style.width = pct + '%';
 
       if (elapsed < TOTAL_MS) {
         raf = requestAnimationFrame(tick);
       } else {
         percentEl.textContent = '100%';
-        barEl.style.width     = '100%';
+        barEl.style.width = '100%';
         // 500 ms pause at 100 %, then slide out
         setTimeout(() => {
           window.scrollTo(0, 0);
@@ -63,7 +63,7 @@
       mouseX = e.clientX;
       mouseY = e.clientY;
       cursor.style.left = mouseX + 'px';
-      cursor.style.top  = mouseY + 'px';
+      cursor.style.top = mouseY + 'px';
     });
 
     document.addEventListener('mouseover', (e) => {
@@ -82,25 +82,25 @@
      3. NAVBAR — scroll spy + smooth anchors
   ═══════════════════════════════════════ */
   (function initNavbar() {
-    const navLinks    = document.querySelectorAll('.nav-link');
+    const navLinks = document.querySelectorAll('.nav-link');
     const mobileLinks = document.querySelectorAll('.mobile-nav-link');
-    const hamburger   = document.getElementById('hamburgerBtn');
-    const mobileMenu  = document.getElementById('mobileMenu');
-    const iconMenu    = document.getElementById('iconMenu');
-    const iconClose   = document.getElementById('iconClose');
+    const hamburger = document.getElementById('hamburgerBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const iconMenu = document.getElementById('iconMenu');
+    const iconClose = document.getElementById('iconClose');
 
     // Section → nav-id mapping (matches original sectionMap in DOM order)
     const sectionMap = {
-      'top':               'hero',
+      'top': 'hero',
       'projects-editorial': 'projects',
-      'about':             'about',
-      'frames':            'frames',
-      'education':         'education',
-      'expertise':         'expertise',
-      'experience':        'experience',
-      'awards':            'awards',
-      'research':          'research',
-      'contact':           'contact',
+      'about': 'about',
+      'frames': 'frames',
+      'education': 'education',
+      'expertise': 'expertise',
+      'experience': 'experience',
+      'awards': 'awards',
+      'research': 'research',
+      'contact': 'contact',
     };
 
     function setActive(navId) {
@@ -182,7 +182,7 @@
       mobileMenu.style.height = mobileMenu.scrollHeight + 'px';
       hamburger.setAttribute('aria-expanded', 'true');
       hamburger.setAttribute('aria-label', 'Close menu');
-      iconMenu.style.display  = 'none';
+      iconMenu.style.display = 'none';
       iconClose.style.display = 'block';
     }
 
@@ -192,7 +192,7 @@
       mobileMenu.style.height = '0';
       hamburger.setAttribute('aria-expanded', 'false');
       hamburger.setAttribute('aria-label', 'Open menu');
-      iconMenu.style.display  = 'block';
+      iconMenu.style.display = 'block';
       iconClose.style.display = 'none';
     }
 
@@ -210,12 +210,12 @@
       const target = parseInt(targetStr);
       if (isNaN(target)) return;
       const suffix = targetStr.replace(String(target), '');
-      const start  = performance.now();
+      const start = performance.now();
 
       function update(now) {
-        const elapsed  = now - start;
+        const elapsed = now - start;
         const progress = Math.min(elapsed / duration, 1);
-        const eased    = 1 - Math.pow(1 - progress, 3); // cubic ease-out
+        const eased = 1 - Math.pow(1 - progress, 3); // cubic ease-out
         el.textContent = Math.floor(eased * target) + suffix;
         if (progress < 1) requestAnimationFrame(update);
         else el.textContent = targetStr;
@@ -223,19 +223,19 @@
       requestAnimationFrame(update);
     }
 
-    const statsCard     = document.querySelector('.stats-card-new');
-    const statProjects  = document.getElementById('stat-val-projects');
-    const statPapers    = document.getElementById('stat-val-papers');
+    const statsCard = document.querySelector('.stats-card-new');
+    const statProjects = document.getElementById('stat-val-projects');
+    const statPapers = document.getElementById('stat-val-papers');
 
     if (!statsCard || !statProjects || !statPapers) return;
 
     const projectsTarget = statProjects.textContent.trim();
-    const papersTarget   = statPapers.textContent.trim();
+    const papersTarget = statPapers.textContent.trim();
 
     const obs = new IntersectionObserver((entries) => {
       if (entries[0].isIntersecting) {
         countUp(statProjects, projectsTarget, 1200);
-        countUp(statPapers,   papersTarget,   1200);
+        countUp(statPapers, papersTarget, 1200);
         obs.disconnect();
       }
     }, { threshold: 0.3 });
@@ -249,13 +249,13 @@
   ═══════════════════════════════════════ */
   (function initHeroParallax() {
     const section = document.getElementById('top');
-    const bgImg   = document.querySelector('.hero-bg-character');
+    const bgImg = document.querySelector('.hero-bg-character');
     if (!section || !bgImg) return;
 
     section.addEventListener('mousemove', (e) => {
       const rect = section.getBoundingClientRect();
-      const x    = (e.clientX - rect.left) / rect.width  - 0.5;
-      const y    = (e.clientY - rect.top)  / rect.height - 0.5;
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
       bgImg.style.transform =
         `scale(1.08) translateX(${x * 20}px) translateY(${y * 20}px) rotateY(${x * 3}deg) rotateX(${-y * 3}deg)`;
     });
@@ -324,19 +324,12 @@
 
       const cards = gsap.utils.toArray('.fbl-card');
 
-      // Assign ascending z-index so each card always stacks ON TOP of
-      // the previous card that is being scaled down. Without this,
-      // card N+1 renders behind card N during the overlap.
-      cards.forEach((card, i) => {
-        card.style.zIndex = i + 1;
-        card.style.transformOrigin = 'top center';
-      });
-
-      // Scale each card down as the next one scrolls on top
+      // Scale each card down as the next one scrolls on top.
+      // Only do this for cards that have a next sibling (not the last card).
       cards.forEach((card, i) => {
         if (i < cards.length - 1) {
           gsap.to(card, {
-            scale: 0.92,
+            scale: 0.93,
             ease: 'none',
             scrollTrigger: {
               trigger: card,
@@ -362,19 +355,19 @@
   ═══════════════════════════════════════ */
   (function initGalleryParallax() {
     const section = document.getElementById('frames');
-    const row1    = document.getElementById('galleryRow1');
-    const row2    = document.getElementById('galleryRow2');
+    const row1 = document.getElementById('galleryRow1');
+    const row2 = document.getElementById('galleryRow2');
     if (!section || !row1 || !row2) return;
 
     // Set row2 initial offset (-20% of its own width)
     row2.style.transform = 'translateX(-20%)';
 
     function update() {
-      const rect     = section.getBoundingClientRect();
-      const vh       = window.innerHeight;
+      const rect = section.getBoundingClientRect();
+      const vh = window.innerHeight;
       // progress: 0 when section bottom enters viewport, 1 when top leaves
-      const total    = rect.height + vh;
-      const elapsed  = vh - rect.top;
+      const total = rect.height + vh;
+      const elapsed = vh - rect.top;
       const progress = Math.min(Math.max(elapsed / total, 0), 1);
 
       // Row 1: translateX from 0% to -20%
